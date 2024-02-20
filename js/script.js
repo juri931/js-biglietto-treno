@@ -21,23 +21,18 @@ console.log("Il costo della corsa sarà di: €"+total+".");
 // 5. Sconto minorenni 20%
 let discount20 = total * 0.20;
 
-if (age<18){
-  total = (total - discount20);
-  document.getElementById('discount').innerHTML = "Il tuo sconto del 20% è di: €" + ((discount20).toFixed(2));
-}
-
 // 6. Sconto over 65 anni 40%
 let discount40 = total * 0.40;
 
-if (age > 65){
-  total = ((total - discount40).toFixed(2));
-  document.getElementById('discount').innerHTML = "Il tuo sconto del 40% è di: €" + ((discount40).toFixed(2));
-}
-
-// Nessuno sconto
-if(age>18 && age<65){
+// Calcolo sconto
+if (age<18){
+  total = (total - discount20);
+  document.getElementById('discount').innerHTML = "Il tuo sconto del 20% è di: €" + ((discount20).toFixed(2));
+}else if (age > 65){
+    total = ((total - discount40).toFixed(2));
+    document.getElementById('discount').innerHTML = "Il tuo sconto del 40% è di: €" + ((discount40).toFixed(2));
+}else
   document.getElementById('discount').innerHTML = "Non hai diritto a nessuno sconto";
-}
 
 // 7. Stampa output
 document.getElementById('totalFinal').innerHTML = "Il totale del biglietto è di: €" + ((total).toFixed(2));
