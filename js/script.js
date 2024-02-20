@@ -35,4 +35,4 @@ if (age<18){
   document.getElementById('discount').innerHTML = "Non hai diritto a nessuno sconto";
 
 // 7. Stampa output
-document.getElementById('totalFinal').innerHTML = "Il totale del biglietto è di: €" + ((total).toFixed(2));
+document.getElementById('totalFinal').innerHTML = "Il totale del biglietto è di: €" + (total).toFixed(2);
